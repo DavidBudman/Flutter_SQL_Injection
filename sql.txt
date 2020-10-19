@@ -1,0 +1,62 @@
+CREATE TABLE `presentation1`.`users` (
+  `ID` INT NOT NULL,
+  `Name` VARCHAR(45) NOT NULL,
+  `UserName` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
+  `Type` VARCHAR(45) NOT NULL,
+  `Sleeps with Stuffed Animal` TINYINT NULL,
+  PRIMARY KEY (`ID`));
+  
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('1', 'dsamuels ', 'dymusicguy', '2', 'student', '1');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('2', 'dbudman', 'darkwing', '3', 'admin', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('3', 'srothman', 'saul', '4', 'student', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('4', 'dklein', 'daniel', '5', 'student', '1');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('5', 'nYudkowsky', 'nati', '6', 'admin', '1');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('6', 'jlawrence', 'jonah', '7', 'admin', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('7', 'eharizy', 'elad', '8', 'student', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('8', 'amurciano', 'abraham', '9', 'student', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('9', 'edweck', 'ezra', '10', 'student', '0');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('10', 'yberger', 'yosef', '11', 'admin', '1');
+INSERT INTO `presentation1`.`users` (`ID`, `Name`, `UserName`, `Password`, `Type`, `Sleeps with Stuffed Animal`) VALUES ('11 ', 'jbenzaken', 'jacques', '12', 'student', '0');
+
+CREATE TABLE `presentation1`.`grades` (
+  `studentID` INT NOT NULL,
+  `grade` INT NOT NULL,
+  `courseID` INT NOT NULL,
+  PRIMARY KEY (`ID`, `courseID`));
+
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('1', '90', '1');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('1', '100', '2');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('2', '23', '3');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('2', '98', '2');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('3', '97', '1');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('4', '95', '3');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('5', '99', '2');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('6', '96', '1');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('7', '94', '2');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('8', '95', '1');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('9', '93', '3');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('10', '100', '4');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('11', '90', '4');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('3', '80', '5');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('3', '85', '3');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('4 ', '90', '2');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('4', '92', '1');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('5', '88', '5');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('6', '82', '5');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('7', '98', '4');
+INSERT INTO `presentation1`.`grades` (`studentID`, `grade`, `courseID`) VALUES ('8', '96', '4');
+
+
+CREATE TABLE `presentation1`.`courses` (
+  `courseID` INT NOT NULL,
+  `credits` FLOAT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `teacher` VARCHAR(45) NULL,
+  PRIMARY KEY (`courseID`));
+
+INSERT INTO `presentation1`.`courses` (`courseID`, `cedits`, `name`, `teacher`) VALUES ('1', '4', 'calculus', 'novick');
+INSERT INTO `presentation1`.`courses` (`courseID`, `cedits`, `name`, `teacher`) VALUES ('2', '2.5', 'probability', 'novick');
+INSERT INTO `presentation1`.`courses` (`courseID`, `cedits`, `name`, `teacher`) VALUES ('3', '3', 'astrophsics', 'tyson');
+INSERT INTO `presentation1`.`courses` (`courseID`, `cedits`, `name`, `teacher`) VALUES ('4', '45', 'meanin_of_life', 'guru');
+INSERT INTO `presentation1`.`courses` (`courseID`, `cedits`, `name`, `teacher`) VALUES ('5', '2', 'discrete', 'miller');

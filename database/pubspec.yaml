@@ -1,0 +1,4 @@
+name: 'database_test'
+
+dependencies:
+  sqflite: ^1.3.0
